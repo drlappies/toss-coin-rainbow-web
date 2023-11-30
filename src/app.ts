@@ -10,6 +10,7 @@ import {
   StandardMaterial,
   PhysicsImpostor,
   Color3,
+  Texture,
 } from "@babylonjs/core";
 import * as Cannon from "cannon";
 
@@ -61,6 +62,10 @@ class App {
       scene
     );
 
+    const tableMaterial = new StandardMaterial("rainbow", scene);
+    tableMaterial.diffuseTexture = new Texture("./assets/rainbow.jpeg");
+    table.material = tableMaterial;
+
     table.physicsImpostor = new PhysicsImpostor(
       table,
       PhysicsImpostor.BoxImpostor,
@@ -76,7 +81,9 @@ class App {
       },
       scene
     );
-
+    const groundMaterial = new StandardMaterial("ground-material");
+    groundMaterial.diffuseTexture = new Texture("./assets/ground.png");
+    ground.material = groundMaterial;
     ground.physicsImpostor = new PhysicsImpostor(
       ground,
       PhysicsImpostor.BoxImpostor,
