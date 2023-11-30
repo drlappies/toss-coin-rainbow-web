@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/cannon": "^0.1.12",
     "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.2",
@@ -13,7 +14,8 @@
   },
   "dependencies": {
     "@babylonjs/core": "^6.31.0",
-    "@babylonjs/inspector": "^6.31.0"
+    "@babylonjs/inspector": "^6.31.0",
+    "cannon": "^0.6.2"
   },
   "scripts": {
     "build": "npx webpack",
